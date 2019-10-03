@@ -14,6 +14,12 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - mkdir -p RCM/bin RCM/lib RCM/conf
+      - touch RCM/bin/startup.sh RCM/conf/application.properties
+      - cp target/messageUtil-1.0.jar RCM/lib
+      - pwd
+      - echo "java $Java_details ../lib/rcmmessageUtil-1.0.jar">> RCM/bin/startup.sh
+
 artifacts:
   files:
-    - target/rcmmessageUtil-1.0.jar
+    - 'RCM/**/*'
