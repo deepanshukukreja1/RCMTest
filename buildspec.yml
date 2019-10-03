@@ -16,7 +16,7 @@ phases:
       - echo Build completed on `date`
       - mkdir -p RCM/bin RCM/lib RCM/conf
       - touch RCM/bin/startup.sh RCM/conf/application.properties
-      - cp target/messageUtil-1.0.jar RCM/lib
+      - cp target/rcmmessageUtil-1.0.jar RCM/lib
       - pwd
       - echo "java $Java_details ../lib/rcmmessageUtil-1.0.jar">> RCM/bin/startup.sh
 
